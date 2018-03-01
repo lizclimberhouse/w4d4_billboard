@@ -1,0 +1,9 @@
+<%= form_for [@artist, @song] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, required: true %>
+  <br>
+  <%= f.label :lyrics %>
+  <%= f.text_area :lyrics %>
+  <br>
+  <%= f.submit %>
+<% end %>
