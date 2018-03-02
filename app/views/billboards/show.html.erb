@@ -2,6 +2,35 @@
 <hr>
 <h3> What Would You Like To Do </h3>
 <br>
+
 <%= link_to 'Edit Billboard', edit_billboard_path %>
 <br>
 <%= link_to 'Delete Billboard', @billboard, method: :delete %>
+<br>
+<span>
+  <h2>Select Song</h2>
+  <%= form_tag(billboard_songs_path, method: :put) do %>
+    <%= hidden_field_tag "id", @billboard.id %>
+    <% @all_available_songs.each do |song| %>
+      <div>  
+        <%= song.title %>
+        <%= check_box_tag "song_ids[]", song.id, false %>
+      </div>
+    <% end %>
+    <%= submit_tag "Add Song" %>
+  <% end %>
+</span>
+<span>
+  <h2>Selected Songs</h2>
+  <%= form_tag(billboard_songs_path, method: :put) do %>
+    <%= hidden_field_tag "selected_songs", true %>
+    <%= hidden_field_tag "id", @billboard.id %>
+    <% @selected_songs.each do |song| %>
+      <div>  
+        <%= song.title %>
+        <%= check_box_tag "selected_song_ids[]", song.id, false %>
+      </div>
+    <% end %>
+    <%= submit_tag "Remove Song" %>
+  <% end %>
+</span>
