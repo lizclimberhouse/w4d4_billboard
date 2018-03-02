@@ -1,14 +1,14 @@
-<div class = "spacy_space container">
-  <h1>Select an Artist To View Details</h1>
-  <hr />
+<div class = "ui headder container spacy_space">
+  <h1 class = "left_space">Select an Artist To View Details</h1>
 </div>
 
-<a class = "ui button blue" href="/billboards">Go to Billboards list</a>
 <div class="spacy_space">
     <div class="ui four cards olive">
       <% @artists.each do |artist| %>
-        <div class = "ui  card">
-          <div class="content centered">
+        <div class = "ui card">
+          <div class="content centered" >
+            <img id="avatar_image" src="https://robohash.org/<%= artist.name %>?set=set4" />
+            <br>
             <%= link_to artist.name, artist%>
           </div>
         </div>
@@ -17,3 +17,6 @@
 </div>
 
 <a class = "ui button blue" href="/artists/new">Add a New Artist</a>
+
+
+<!-- <a href="/artists/id"></a> -->

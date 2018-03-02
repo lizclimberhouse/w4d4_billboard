@@ -1,6 +1,5 @@
 <div class="ui headder container spacy_space">
-  <h1>Song: <%= @song.title %> by: <%= @artist.name %></h1>
-  <hr />
+  <h1 class="centered">Song "<%= @song.title %>" by <%= @artist.name %></h1>
 </div>
 
 <div class="spacy_space">
@@ -12,4 +11,4 @@
 <button class="ui left attached button"><%= link_to 'Edit Song', edit_artist_song_path(@artist, @song) %></button>
 <button class="right attached ui button"><%= link_to 'Delete Song', [@artist, @song], method: :delete %></button>
 <p></p>
-<button class="ui button blue" id="back_color"><%= link_to 'Back to Songs List', artist_songs_path(@artist) %></button>
+<%= link_to 'Back to Songs List', artist_songs_path(@artist) , :class => "ui button blue"  %>

@@ -1,6 +1,5 @@
-<div class="ui headder container spacy_space">
+<div class="ui headder centered container spacy_space">
   <h1>Songs by <%= @artist.name %></h1>
-  <hr />
 </div>
 <h2>Click on a song to view:</h2>
 
@@ -14,4 +13,4 @@
   </ul>
 </div>
 <%= link_to 'Create a new song', new_artist_song_path(@artist), :class => "ui button blue"  %>
-<%= link_to 'Back to artist', artist_path(@artist), :class => "ui button", :id => "back_color"  %>
+<%= link_to 'Back to artist', artist_path(@artist), :class => "ui button" %>
