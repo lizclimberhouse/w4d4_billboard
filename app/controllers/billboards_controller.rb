@@ -27,22 +27,22 @@ class BillboardsController < ApplicationController
 
   def update 
     if @billboard.update(billboard_params)
-      redirect_to @billboards
+      redirect_to billboards_path
     else 
       render :edit 
     end 
   end 
 
   def destroy 
-    if @billboards.destroy
-      redirect_to billboards_path
+    @billboard.destroy
+    redirect_to billboards_path
   end 
 
 
   private
 
   def set_billboard
-    @billobard = Billboard.find(params[:id])
+    @billboard = Billboard.find(params[:id])
   end 
 
   def billboard_params
