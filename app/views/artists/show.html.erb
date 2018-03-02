@@ -1,8 +1,13 @@
 <h1><%= @artist.name %></h1>
 <hr />
 <p>What would you like to do?</p>
-<%= link_to 'View Songs', artist_songs_path(@artist) %>
+<div class = "list text ui">
+  <%= link_to 'View Songs by ' + @artist.name , artist_songs_path(@artist) %>
+  <br />
+  <%= link_to 'Edit ' + @artist.name , edit_artist_path(@artist) %>
+  <br />
+  <%= link_to 'Delete  ' + @artist.name , @artist, method: :delete %>
+</div>
 <br />
-<%= link_to 'Edit Sub', edit_artist_path(@artist) %>
-<br />
-<%= link_to 'Delete Sub', @artist, method: :delete %>
+
+<a class = "text ui " href="/artists">Go to list of all Artists</a>

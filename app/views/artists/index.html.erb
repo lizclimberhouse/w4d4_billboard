@@ -1,6 +1,7 @@
-<h1>Select an Artist To View</h1>
+<h1 class = "headder">Select an Artist To View</h1>
+<hr />
 <%= link_to 'Add a new artist', new_artist_path %>
-<ul>
+<ul class = "links ">
   <% @artists.each do |artist| %>
     <li><%= link_to artist.name, artist %></li>
   <% end %>

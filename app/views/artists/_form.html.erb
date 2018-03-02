@@ -1,9 +1,15 @@
 <%= form_for [@artist] do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, required: true %>
+  <div class = "ui">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </div>
   <br />
-  <%= f.label :genre %>
-  <%= f.text_field :genre %>
+  <div class = "text ui">
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+  </div>
   <br />
-  <%= f.submit %>
+  <div class = "button ui">
+    <%= f.submit %>
+  </div>
 <% end %>
