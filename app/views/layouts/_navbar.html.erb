@@ -1,2 +1,4 @@
-<button class="ui left attached button"><%= link_to 'Billboards', root_path %></button>
+<button class="ui left attached button"><%= link_to 'Billboards', billboards_path %></button>
 <button class="right attached ui button"><%= link_to 'Artists', artists_path %></button>
+<button class="right attached ui button"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></button>
+
