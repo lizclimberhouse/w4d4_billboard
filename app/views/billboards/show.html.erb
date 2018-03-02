@@ -1,36 +1,53 @@
-<h1><%= @billboard.name %></h1>
-<hr>
-<h3> What Would You Like To Do </h3>
+<div class="ui headder container spacy_space">
+  <h1><%= @billboard.name %></h1>
+  <hr />
+</div>
+<h2> What Would You Like To Do:</h2>
+
+<span class="spacy_space">
+  <h3>Select Song:</h3>
+  <ul class="ui links">
+    <%= form_tag(billboard_songs_path, method: :put) do %>
+      <%= hidden_field_tag "id", @billboard.id %>
+      <% @all_available_songs.each do |song| %>
+        <div>  
+          <li class="no_dots card">
+            <%= song.title %>
+            <%= check_box_tag "song_ids[]", song.id, false %>
+          </li>
+        </div>
+      <% end %>
+    </ul>
+    <%= submit_tag "Add Song", :class => "ui button blue"%>
+  <% end %>
+</span>
+<br>
+<br>
+<span class="spacy_space">
+  <h3>Selected Songs:</h3>
+  <ul class="ui links">
+    <%= form_tag(billboard_songs_path, method: :put) do %>
+      <%= hidden_field_tag "selected_songs", true %>
+      <%= hidden_field_tag "id", @billboard.id %>
+      <% @selected_songs.each do |song| %>
+        <div>
+          <li class="no_dots card">
+            <%= song.title %>
+            <%= check_box_tag "selected_song_ids[]", song.id, false %>
+          </li>
+        </div>
+      <% end %>
+    </ul>
+    <%= submit_tag "Remove Song", :class => "ui button grey" %>
+  <% end %>
+</span>
+
+<br>
+<br>
 <br>
 
-<%= link_to 'Edit Billboard', edit_billboard_path %>
-<br>
-<%= link_to 'Delete Billboard', @billboard, method: :delete %>
-<br>
-<span>
-  <h2>Select Song</h2>
-  <%= form_tag(billboard_songs_path, method: :put) do %>
-    <%= hidden_field_tag "id", @billboard.id %>
-    <% @all_available_songs.each do |song| %>
-      <div>  
-        <%= song.title %>
-        <%= check_box_tag "song_ids[]", song.id, false %>
-      </div>
-    <% end %>
-    <%= submit_tag "Add Song" %>
-  <% end %>
-</span>
-<span>
-  <h2>Selected Songs</h2>
-  <%= form_tag(billboard_songs_path, method: :put) do %>
-    <%= hidden_field_tag "selected_songs", true %>
-    <%= hidden_field_tag "id", @billboard.id %>
-    <% @selected_songs.each do |song| %>
-      <div>  
-        <%= song.title %>
-        <%= check_box_tag "selected_song_ids[]", song.id, false %>
-      </div>
-    <% end %>
-    <%= submit_tag "Remove Song" %>
-  <% end %>
-</span>
+<button class="ui left attached button"><%= link_to 'Edit Billboard', edit_billboard_path %></button>
+<button class="right attached ui button"><%= link_to 'Delete Billboard', @billboard, method: :delete %></button>
+<p></p>
+<button class="ui button" id="back_color"><%= link_to 'Back to Billboards List', root_path%></button>
+

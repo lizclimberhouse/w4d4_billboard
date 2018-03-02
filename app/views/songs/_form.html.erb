@@ -1,9 +1,12 @@
 <%= form_for [@artist, @song] do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title, required: true %>
-  <br>
-  <%= f.label :lyrics %>
-  <%= f.text_area :lyrics %>
-  <br>
-  <%= f.submit %>
+<div class="ui container spacy_space">
+  <div class="spacy_space">
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true %>
+  </div>
+  <div class="ui spacy_space">
+    <%= f.label :lyrics %>
+    <%= f.text_area :lyrics %>
+  </div>
+    <%= f.submit class: "ui button white blue_text"%>
 <% end %>

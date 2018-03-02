@@ -1,10 +1,17 @@
-<h1>Click to View Artist: "<%= @artist.name %>" Songs</h1>
-<%= link_to 'Create a new song', new_artist_song_path(@artist) %>
-<ul>
-  <% @songs.each do |song| %>
-    <li>
-    <%= link_to song.title, [@artist, song] %>
-    </li>
-  <% end %>
-</ul>
-<%= link_to 'Back to artist', artist_path(@artist) %>
+<div class="ui headder container spacy_space">
+  <h1>Songs by <%= @artist.name %></h1>
+  <hr />
+</div>
+<h2>Click on a song to view:</h2>
+
+<div class="spacy_space">
+  <ul class="ui links">
+    <% @songs.each do |song| %>
+      <li class="no_dots card">
+        <%= link_to song.title, [@artist, song] %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<%= link_to 'Create a new song', new_artist_song_path(@artist), :class => "ui button blue"  %>
+<%= link_to 'Back to artist', artist_path(@artist), :class => "ui button", :id => "back_color"  %>

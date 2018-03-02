@@ -1,4 +1,8 @@
 @import "semantic-ui";
+@import "songs";
+@import "flash";
+@import "artists";
+@import "billboards";
 
 a {
   text-decoration: none;
@@ -10,7 +14,24 @@ a {
 }
 
 .headder {
+  color: white;
   font-size: 20px;
+  background-color:  #2185D0;
+  border-radius: 5px;
+}
+
+li {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.larger_font {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#back_color {
+  background-color: rgb(250, 244, 158);
 }
 
 .text {
@@ -22,9 +43,10 @@ a {
   /*Shandelle hates those dots, but lists are so useful for formatting*/
 }
 .spacy_space{
-  margin: 20px 0;
+  margin: 10px 20px;
+  padding: 10px 20px;
 }
-.button{}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

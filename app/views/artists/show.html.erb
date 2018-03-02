@@ -1,21 +1,29 @@
-<headder class = "ui headder container spacy_space">
+<div class="ui headder container spacy_space">
   <h1><%= @artist.name %></h1>
   <hr />
-</headder>
-
-<p>What would you like to do?</p>
-<div class = "text ui">
-
-  <div class = "spacy_space">
-    <%= link_to 'View Songs by ' + @artist.name , artist_songs_path(@artist) %>
+</div>
+<h2>Select an option below:</h2>
+<br>
+<!--<h2>What would you like to do?</h2>
+<div class="text ui">
+  <div class="spacy_space">
+    <h2><%= link_to 'View Songs by ' + @artist.name , artist_songs_path(@artist) %></h2>
   </div>
-  <div class = "spacy_space">
+  <div class="spacy_space">
     <%= link_to 'Edit ' + @artist.name , edit_artist_path(@artist) %>
   </div>
-  <div class = "spacy_space">
+  <div class="spacy_space">
     <%= link_to 'Delete  ' + @artist.name , @artist, method: :delete %>
   </div>
 </div>
-<br />
+<br />-->
 
-<a class = "text ui button blue" href="/artists">Go to list of all Artists</a>
+<button class="ui labeled icon button">
+  <i class="play icon"></i>
+  <%= link_to 'View Songs by ' + @artist.name , artist_songs_path(@artist) %>
+</button>
+<p></p>
+<button class="ui left attached button"><%= link_to 'Edit Artist', edit_artist_path(@artist) %></button>
+<button class="right attached ui button"><%= link_to 'Delete Artist', @artist, method: :delete %></button>
+<p></p>
+<a class="text ui button" id="back_color" href="/artists">Back to Artists List</a>

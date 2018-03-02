@@ -1,18 +1,19 @@
-<div class = "spacy_space container">
-  <h1>Select an Artist To View Details</h1>
+<div class="ui headder container spacy_space">
+  <h1>All The Artists</h1>
   <hr />
 </div>
 
-
+<h2>Click on an Artist:</h2>
 <div class="spacy_space">
-  <ul class = "ui links">
+  <ul class="ui links">
 
     <% @artists.each do |artist| %>
-    <div clas = "cards">
-      <li class = "no_dots card"><%= link_to artist.name, artist %></li>
+    <div class="cards">
+      <li class="no_dots card"><%= link_to artist.name, artist %></li>
     <% end %>
     </div>
   </ul>
 </div>
 
-<a class = "ui button blue" href="/artists/new">Add a New Artist</a>
+<a class="ui button blue" href="/artists/new">Add a New Artist</a>
+<!--<%= link_to 'Billboards List', root_path, :class => "ui button grey" %>-->

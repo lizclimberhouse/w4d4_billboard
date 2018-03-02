@@ -1,12 +1,20 @@
-<h1>All The Billboards</h1>
-<hr />
-<%= link_to 'Create a New Billboard', new_billboard_path %>
+<div class="ui headder container spacy_space">
+  <h1>All The Billboards</h1>
+  <hr />
+</div>
 
-<%= link_to 'Artists List', artists_path %>
+<h2>Click on a Billboard:</h2>
 
-
-<ul>
-  <% @billboards.each do |billboard| %>
-    <li><%= link_to billboard.name, billboard %></li>
-    <% end %>
+<div class="spacy_space">
+  <ul class="ui links">
+    <% @billboards.each do |billboard| %>
+    <div class="cards">
+      <li class="no_dots card"><%= link_to billboard.name, billboard %></li>
+      <% end %>
+    </div>
   </ul>
+</div>
+
+
+<%= link_to 'Create a New Billboard', new_billboard_path, :class => "ui button blue" %>
+<!--<%= link_to 'Artists List', artists_path, :class => "ui button grey" %>-->

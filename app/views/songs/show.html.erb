@@ -1,8 +1,15 @@
-<h1>Artist: "<%= @artist.name %>" Song: "<%= @song.title %>"</h1>
-<p><%= @song.lyrics %></p>
+<div class="ui headder container spacy_space">
+  <h1>Song: <%= @song.title %> by: <%= @artist.name %></h1>
+  <hr />
+</div>
+
+<div class="spacy_space">
+  <h2>Lyrics:</h2>
+  <p class="larger_font"><%= @song.lyrics %></p>
+</div>
 
 
-<hr>
-<%= link_to 'Edit Song', edit_artist_song_path(@artist, @song) %>
-<%= link_to 'Delete Song', [@artist, @song], method: :delete %>
-<%= link_to 'Back to Songs', artist_songs_path(@artist) %>
+<button class="ui left attached button"><%= link_to 'Edit Song', edit_artist_song_path(@artist, @song) %></button>
+<button class="right attached ui button"><%= link_to 'Delete Song', [@artist, @song], method: :delete %></button>
+<p></p>
+<button class="ui button blue" id="back_color"><%= link_to 'Back to Songs List', artist_songs_path(@artist) %></button>

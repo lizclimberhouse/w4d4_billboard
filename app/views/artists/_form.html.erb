@@ -1,13 +1,13 @@
 <%= form_for [@artist] do |f| %>
-  <div class = "ui container spacy_space">
-    <div class = "spacy_space">
+  <div class="ui container spacy_space">
+    <div class="spacy_space">
     <%= f.label :name %>
     <%= f.text_field :name, required: true %>
   </div>
-  <div class = "ui spacy_space">
+  <div class="ui spacy_space">
     <%= f.label :genre %>
     <%= f.text_field :genre %>
   </div>
-  <%= f.submit class: "ui button blue white_text" %>
+  <%= f.submit class: "ui button white blue_text" %>
 
 <% end %>
