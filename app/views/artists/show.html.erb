@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="ui headder container spacy_space">
   <h1><%= @artist.name %></h1>
   <hr />
@@ -28,28 +27,3 @@
 <button class="right attached ui button"><%= link_to 'Delete Artist', @artist, method: :delete %></button>
 <p></p>
 <a class="text ui button" id="back_color" href="/artists">Back to Artists List</a>
-=======
-<headder class = "ui headder container centered spacy_space">
-  <div class = "left_space">
-    <h1><%= @artist.name%></h1>
-  </div>
-  <hr />
-</headder>
-
-<p>What would you like to do?</p>
-<div class = "text ui">
-
-  <div class = "spacy_space">
-    <%= link_to 'View Songs by ' + @artist.name , artist_songs_path(@artist) %>
-  </div>
-  <div class = "spacy_space">
-    <%= link_to 'Edit ' + @artist.name , edit_artist_path(@artist) %>
-  </div>
-  <div class = "spacy_space">
-    <%= link_to 'Delete  ' + @artist.name , @artist, method: :delete %>
-  </div>
-</div>
-<br />
-
-<a class = "text ui button blue" href="/artists">Go to list of all Artists</a>
->>>>>>> some more styling, cards for artists
