@@ -1,5 +1,5 @@
-<%= form_for [@artist] do |f| %>
-  <div class = "ui">
+<!-- <%= form_for [@artist] do |f| %>
+  <div>
     <%= f.label :name %>
     <%= f.text_field :name, required: true %>
   </div>
@@ -12,4 +12,23 @@
   <div class = "button ui">
     <%= f.submit %>
   </div>
+<% end %> -->
+
+<%= form_for [@artist] do |f| %>
+  <div class = "ui container spacy_space">
+    <div class = "spacy_space">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <div class = "ui spacy_space">
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+  </div>
+  <%= f.submit class: "ui button blue white_text" %>
+  <!-- <a type="submit" name="commit" value="Create Artist" class = "ui button blue" href="/artists/new">Add Artist</a> -->
+  <!-- <button class = "ui button blue white_text">
+
+  </button> -->
 <% end %>
+
+<!-- <input type="submit" name="commit" value="Create Artist" data-disable-with="Create Artist"> -->

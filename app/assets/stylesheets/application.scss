@@ -1,5 +1,30 @@
 @import "semantic-ui";
 
+a {
+  text-decoration: none;
+  color: black;
+  }
+
+.centered {
+  align-items: center;
+}
+
+.headder {
+  font-size: 20px;
+}
+
+.text {
+  text-decoration: none;
+
+}
+.no_dots {
+  list-style-type: none;
+  /*Shandelle hates those dots, but lists are so useful for formatting*/
+}
+.spacy_space{
+  margin: 20px 0;
+}
+.button{}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

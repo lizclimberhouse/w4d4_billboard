@@ -1,13 +1,21 @@
-<h1><%= @artist.name %></h1>
-<hr />
+<headder class = "ui headder container spacy_space">
+  <h1><%= @artist.name %></h1>
+  <hr />
+</headder>
+
 <p>What would you like to do?</p>
-<div class = "list text ui">
-  <%= link_to 'View Songs by ' + @artist.name , artist_songs_path(@artist) %>
-  <br />
-  <%= link_to 'Edit ' + @artist.name , edit_artist_path(@artist) %>
-  <br />
-  <%= link_to 'Delete  ' + @artist.name , @artist, method: :delete %>
+<div class = "text ui">
+
+  <div class = "spacy_space">
+    <%= link_to 'View Songs by ' + @artist.name , artist_songs_path(@artist) %>
+  </div>
+  <div class = "spacy_space">
+    <%= link_to 'Edit ' + @artist.name , edit_artist_path(@artist) %>
+  </div>
+  <div class = "spacy_space">
+    <%= link_to 'Delete  ' + @artist.name , @artist, method: :delete %>
+  </div>
 </div>
 <br />
 
-<a class = "text ui " href="/artists">Go to list of all Artists</a>
+<a class = "text ui button blue" href="/artists">Go to list of all Artists</a>
