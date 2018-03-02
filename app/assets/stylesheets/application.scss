@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "semantic-ui";
 @import "songs";
 @import "flash";
@@ -63,3 +64,62 @@ li {
  *= require_tree .
  *= require_self
  */
+=======
+@import "semantic-ui";
+
+a {
+  text-decoration: none;
+  color: black;
+  }
+h1 {
+  align-items: center;
+}
+
+.centered {
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+}
+
+.card {
+}
+.content {
+  color: yellow;
+  font-size: 2em;
+}
+.headder {
+  font-size: 20px;
+}
+
+.text {
+  text-decoration: none;
+}
+.no_dots {
+  list-style-type: none;
+  /*Shandelle hates those dots, but lists are so useful for formatting*/
+}
+.spacy_space{
+  margin: 20px 0;
+}
+.left_space{
+  margin-left: 2em;
+}
+.button{}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+>>>>>>> some more styling, cards for artists

@@ -1,19 +1,19 @@
-<div class="ui headder container spacy_space">
-  <h1>All The Artists</h1>
+<div class = "spacy_space container">
+  <h1>Select an Artist To View Details</h1>
   <hr />
 </div>
 
-<h2>Click on an Artist:</h2>
+<a class = "ui button blue" href="/billboards">Go to Billboards list</a>
 <div class="spacy_space">
-  <ul class="ui links">
-
-    <% @artists.each do |artist| %>
-    <div class="cards">
-      <li class="no_dots card"><%= link_to artist.name, artist %></li>
-    <% end %>
+    <div class="ui four cards olive">
+      <% @artists.each do |artist| %>
+        <div class = "ui  card">
+          <div class="content centered">
+            <%= link_to artist.name, artist%>
+          </div>
+        </div>
+      <% end %>
     </div>
-  </ul>
 </div>
 
-<a class="ui button blue" href="/artists/new">Add a New Artist</a>
-<!--<%= link_to 'Billboards List', root_path, :class => "ui button grey" %>-->
+<a class = "ui button blue" href="/artists/new">Add a New Artist</a>
