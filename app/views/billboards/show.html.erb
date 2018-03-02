@@ -2,10 +2,14 @@
   <h1><%= @billboard.name %></h1>
   <hr />
 </div>
-<h2> What Would You Like To Do:</h2>
+<br>
+<button class="ui left attached button"><%= link_to 'Edit Billboard', edit_billboard_path %></button>
+<button class="right attached ui button"><%= link_to 'Delete Billboard', @billboard, method: :delete %></button>
+<button class="ui button" id="back_color"><%= link_to 'Back to Billboards List', root_path%></button>
+<hr>
 
-<span class="spacy_space">
-  <h3>Select Song:</h3>
+<div class="spacy_space" id="left">
+  <h3>Select a Song To Add:</h3>
   <ul class="ui links">
     <%= form_tag(billboard_songs_path, method: :put) do %>
       <%= hidden_field_tag "id", @billboard.id %>
@@ -20,11 +24,12 @@
     </ul>
     <%= submit_tag "Add Song", :class => "ui button blue"%>
   <% end %>
-</span>
+</div>
 <br>
+<vr class="vertical">
 <br>
-<span class="spacy_space">
-  <h3>Selected Songs:</h3>
+<div class="spacy_space" id="right">
+  <h2>Songs on <%= @billboard.name %>: </h2>
   <ul class="ui links">
     <%= form_tag(billboard_songs_path, method: :put) do %>
       <%= hidden_field_tag "selected_songs", true %>
@@ -40,14 +45,7 @@
     </ul>
     <%= submit_tag "Remove Song", :class => "ui button grey" %>
   <% end %>
-</span>
+</div>
 
-<br>
-<br>
-<br>
 
-<button class="ui left attached button"><%= link_to 'Edit Billboard', edit_billboard_path %></button>
-<button class="right attached ui button"><%= link_to 'Delete Billboard', @billboard, method: :delete %></button>
-<p></p>
-<button class="ui button" id="back_color"><%= link_to 'Back to Billboards List', root_path%></button>
 

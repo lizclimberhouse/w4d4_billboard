@@ -1,3 +1,27 @@
 // Place all the styles related to the Billboards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#left {
+    display: inline-block;
+    float: left;
+}
+
+#right {
+  margin-right: 100px;
+  display: flex;
+  align-items: flex-start;
+  float: right;
+  
+}
+
+// .vertical {
+//   border: 1px black solid; 
+//   display: flex;
+//   justify-content: center;
+//   align-self: center;
+// }
+
+// #remove_song {
+
+// }
